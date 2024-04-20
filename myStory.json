@@ -1,58 +1,202 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Back to Human",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu), edited by Roman Luo (yluo111@ucsc.edu).",
+    "InitialLocation": "Lab1",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Lab1": {
+            "Body": "You gradually open your eyes, but your eyes are blurred, and your mind is confused. \n\nWhen you look at your hands, there are two... paws? You're looking around and seeing how huge everything is. 'I'm...what's wrong,' you marvel. \n\nYou slowly walk towards the metal pillar next to it, and you see a chubby hamster through the reflection. 'Is that me? How did I become a hamster? Am I dreaming?' You bite yourself. 'Ouch, Squeaking,' obviously not a dream. \n\nAlthough you are still in shock, you try hard to remember exactly what happened. Still, you only remember things before you turned into a hamster, including a decent amount of knowledge you gained when you were human, but you have forgotten who you are. You also wobble when you walk, obviously not used to your new body. You look around again. \n\nAs soon as you turn around, you see tables stretched around the room. There are all kinds of experimental equipment, and it dawns on you - 'this is a laboratory.' Everything looks gigantic from the ground you stand upon. It turns out the metal pillars are table legs. You jump on the trash can, then the chair, making your way to the table where you find a map.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Go to the Living Room",
+                    "Target": "Living Room"
                 }
-            ]
+            ],
+            "itemChoice": {
+                "Text": "Pick up the Phone",
+                "Target": "Phone"
+            }
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Living Room": {
+            "Body": "According to the map, this is Dr. Liao's private mansion, and you are at the Living Room: ",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Go to the bathroom",
+                    "Target": "Bathroom"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Go to the bedroom",
+                    "Target": "Bedroom"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Go to the Main Lab",
+                    "Target": "Lab2"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Go to the Utility Room",
+                    "Target": "Utility Room"
+                },
+                {
+                    "Text": "Go back to the lab where you woke up",
+                    "Target": "Lab1"
+                }
+            ],
+            "itemChoice": {
+                "Text": "Turn on the Light",
+                "Target": "Light On"
+            }
+        },
+        "Lab2": {
+            "Body": "This is the main lab entrance.",
+            "Choices": [
+                {
+                    "Text": "Go to the living room",
+                    "Target": "Living Room"
+                }
+            ],
+            "itemChoice": {
+                "Text": "Open the Main Lab door",
+                "Target": "Door"
+            },
+            "exitChoice": {
+                "Text": "The door is unlocked, go inside the main lab",
+                "Target": "Ending"
+            }
+        },
+        "Bathroom": {
+            "Body": "You are in the Bathroom.",
+            "Choices": [
+                {
+                    "Text": "Go to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Go to the bedroom",
+                    "Target": "Bedroom"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Bedroom": {
+            "Body": "You are in the Bedroom.",
+            "Choices": [
+                {
+                    "Text": "Go to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Go to the bathroom",
+                    "Target": "Bathroom"
+                }
+            ]
+        },
+        "Utility Room": {
+            "Body": "This is your Utility Room. It's cluttered with cleaning supplies and tools.",
+            "Choices": [
+                {
+                    "Text": "Go to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Go to the Garage",
+                    "Target": "Garage"
+                }
+            ]
+        },
+        "Garage": {
+            "Body": "This is your Garage. Various vehicles and mechanical tools are scattered around.",
+            "Choices": [
+                {
+                    "Text": "Go to the Utility Room",
+                    "Target": "Utility Room"
+                },
+                {
+                    "Text": "Go through a hidden door",
+                    "Target": "Hidden"
+                }
+            ]
+        },
+        "Hidden": {
+            "Body": "You are in hidden room. You see a ID Card Key on the ground",
+            "Choices": [
+                {
+                    "Text": "Go to the Garage",
+                    "Target": "Garage"
+                }
+            ],
+            "itemChoice": {
+                "Text": "Pick up the key",
+                "Target": "Key"
+            }
+        },
+        "End": {
+            "Body": "YOU TURNED BACK TO HUMAN!!!"
+        },
+        "Cat": {
+            "Body": "The cat killed you :("
+        }
+    },
+    "Items": {
+        "Phone": {
+            "Body": "The Phone is too heavy for you... and it's dead",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "Lab1"
+                }
+            ]
+        },
+        "Light On": {
+            "Body": "You turn on the Light. You see a stray cat. TURN IT OFF BEFORE IT SEES YOU!!!",
+            "Choices": [
+                {
+                    "Text": "TURN OFF THE LIGHT!!!",
+                    "Target": "Light Off"
+                }
+            ]
+        },
+        "Light Off": {
+            "Body": "\"Luckily, the cat didn't see you\"",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Light End": {
+            "Body": "\"This time, the cat sees you\"",
+            "Choices": [
+                {
+                    "Text": "GG",
+                    "Target": "Cat"
+                }
+            ]
+        },
+        "Door": {
+            "Body": "LOCKED!! You need an ID key",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "Lab2"
+                }
+            ]
+        },
+        "Key": {
+            "Body": "You pick up the key.",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "Hidden"
+                }
+            ]
+        },
+        "Ending": {
+            "Body": "Initiate the convertion.",
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Target": "End"
+                }
+            ]
         }
     }
 }
